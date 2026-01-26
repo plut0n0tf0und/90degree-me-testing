@@ -3071,14 +3071,45 @@
         }
 
         .hero {
-            width: 100%;
-            height: 100vh;
-            background: radial-gradient(circle at 50% 50%, #ffffff 1px, transparent 1px),
-                        radial-gradient(circle at 20% 80%, #ffffff 1px, transparent 1px),
-                        radial-gradient(circle at 80% 20%, #ffffff 1px, transparent 1px);
-            background-size: 200px 200px;
-            background-color: #000; /* night sky */
-        }
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #05070d;
+  overflow: hidden;
+}
+
+/* Base star layers */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* FAR SMALL STARS (dense) */
+.hero::before {
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 30% 80%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,.7), transparent),
+    radial-gradient(1px 1px at 90% 90%, rgba(255,255,255,.5), transparent);
+  background-size: 120px 120px;
+  opacity: 0.6;
+}
+
+/* MID + BRIGHT STARS */
+.hero::after {
+  background-image:
+    radial-gradient(2px 2px at 15% 60%, rgba(255,255,255,.9), transparent),
+    radial-gradient(2px 2px at 50% 10%, rgba(255,255,255,.8), transparent),
+    radial-gradient(3px 3px at 80% 30%, rgba(180,220,255,.9), transparent),
+    radial-gradient(3px 3px at 40% 90%, rgba(200,230,255,.85), transparent);
+  background-size: 300px 300px;
+  filter: drop-shadow(0 0 6px rgba(180,220,255,.6));
+}
+
     </style>
     <script nonce="LRI1ghVED-2fK6VTdZJDMg">
         _at_config = [null, "AIzaSyChg3MFqzdi1P5J-YvEyakkSA1yU7HRcDI", "897606708560-a63d8ia0t9dhtpdt4i3djab2m42see7o.apps.googleusercontent.com", null, null, null, null, null, null, null, null, null, null, null, "SITES_%s", null, null, null, null, null, null, null, null, null, ["AHKXmL3KocFpl7ertHlaRLql6kLJJkRTRlXueN5l_MvRDCJtveBXssyD2DLvBbwxlj6bB-jNCA7K", 1, "CLPlx92ymZIDFWPLSgAdj-853w", 1768887308907187, [5703839, 5704621, 5706832, 5706836, 5738513, 5738529, 5740798, 5740814, 5743108, 5743124, 5747265, 5758807, 5758823, 5762243, 5762259, 5773662, 5773678, 5774836, 5774852, 5776501, 5776517, 5784931, 5784947, 5784951, 5784967, 14101306, 14101502, 14101510, 14101534, 49472063, 49472071, 49643568, 49643576, 49644015, 49644023, 49769337, 49769345, 49822921, 49822929, 49823164, 49823172, 49833462, 49833470, 49842855, 49842863, 49924706, 49924714, 50266222, 50266230, 50273528, 50273536, 50297076, 50297084, 50549555, 50549563, 50561343, 50561351, 50586962, 50586970, 70971256, 70971264, 71079938, 71079946, 71085241, 71085249, 71120968, 71120976, 71387889, 71387897, 71465947, 71465955, 71501423, 71501431, 71528597, 71528605, 71530083, 71530091, 71544834, 71544842, 71546425, 71546433, 71642103, 71642111, 71658040, 71658048, 71659813, 71659821, 71689860, 71689868, 71710040, 71710048, 71742921, 71742937, 71798420, 71798436, 71798440, 71798456, 71825383, 71825391, 71855010, 71855018, 71897827, 71897835, 71960540, 71960548, 94327671, 94327679, 94353368, 94353376, 94434257, 94434265, 94523168, 94523176, 94624865, 94624873, 94629757, 94629765, 94660795, 94660803, 94661802, 94661810, 94692298, 94692306, 94744856, 94744864, 94785229, 94785237, 94864653, 94864661, 94904089, 94904097, 94918952, 94918960, 95087186, 95087194, 95112873, 95112881, 95118561, 95118569, 95135933, 95135941, 95314802, 95314810, 95317482, 95317490, 99251973, 99251981, 99265946, 99265954, 99338440, 99338448, 99368792, 99368800, 99402331, 99402339, 99440853, 99440861, 99457807, 99457815, 101508355, 101508363, 101519280, 101519288, 101562406, 101562414, 101631191, 101631199, 101659254, 101659262, 101687117, 101687125, 101754342, 101754350, 101836971, 101836979, 101837416, 101837424, 101855239, 101855247, 101887664, 101887672, 101917185, 101917193, 101922739, 101922747, 101922880, 101922888, 101933491, 101933499, 102030642, 102030650, 102044278, 102044286, 102059531, 102059539, 102070930, 102070938, 102074087, 102074095, 102146687, 102146695, 102161447, 102161455, 102198282, 102198290, 102199034, 102199050, 102244489, 102244497, 102249831, 102262249, 102262257, 102280628, 102280636, 102287864, 102287872, 102343036, 102343044, 102343380, 102343388, 102402679, 102402687, 102428666, 102428674, 102430621, 102430629, 102469860, 102469868, 102515093, 102515098, 102517339, 102517344, 102673375, 102685384, 102685389, 102685923, 102685928, 102690600, 102690608, 102691157, 102691162, 102718390, 102721215, 102721220, 102741226, 102741234, 102762315, 102762323, 102774707, 102774715, 102787563, 102807790, 102807798, 102867835, 102867843, 102887236, 102887244, 102903660, 102903668, 102909750, 102909755, 102921493, 102921501, 102925819, 102925827, 102926523, 102926531, 102932587, 102932595, 102944189, 102944194, 102944268, 102944273, 102944503, 102944508, 102944582, 102944587, 102944680, 102944685, 102944785, 102944790, 102956685, 102956693, 102969762, 102969770, 102972669, 102972677, 102973360, 102973368, 102984172, 102984180, 102988272, 102988277, 103011418, 103011426, 103068916, 103068924, 103176010, 103176018, 103176419, 103176427, 103286444, 103286452, 103288306, 103288314, 103289103, 103289108, 103296034, 103296042, 103326407, 103326415, 103343830, 103343838, 103354296, 103354304, 103354852, 103354860, 103355353, 103355361, 103355643, 103355651, 104530129, 104573899, 104573907, 104615595, 104615603, 104661247, 104661255, 104663867, 104663883, 104699504, 104699512, 104732763, 104732771, 104764124, 104764132, 104801546, 104801554, 104869084, 104869092, 104874944, 104874960, 104907811, 104907819, 104940397, 104940405, 104962265, 104976617, 104976625, 104983169, 104983177, 105060739, 105060747, 105072273, 105072281, 105082097, 105082105, 105112583, 105112588, 105114679, 105114687, 105120751, 105120767, 105140245, 105140253, 105143309, 105143317, 105180894, 105180902, 105276179, 105276184, 105283687, 105283695, 105292835, 105292843, 105293726, 105293734, 105302073, 105302081, 105346285, 105346293, 105360418, 105360426, 105360882, 105360890, 105373824, 105373832, 105393811, 105393819, 105439171, 105439179, 115509982, 115509990, 115533919, 115533924, 115626258, 115626266, 115626439, 115626447, 115669258, 115669266, 115748247, 115748252, 115769458, 115769466, 115786272, 115786280, 115818444, 115818449, 115895896, 115895904, 115909741, 115909749, 115936304, 115936312, 115990671, 115990679, 115996281, 115996289, 116059345, 116059353, 116086373, 116095154, 116095162, 116100583, 116179574, 116179582, 116203363, 116203368, 116221334, 116221342, 116276461, 116276469, 116307750, 116361222, 116371628, 116371636, 116407665, 116416034, 116416042, 116420468, 116425644, 116428005, 116428888, 116448407, 116449516, 116470832, 116479002, 116479007, 116483680, 116483688, 116495859, 116495867, 116498664, 116503940, 116503961, 116542687, 116550348, 116567571, 116567576, 116593745, 116613094, 116613710, 116670655, 116685398, 116685789, 116704081, 116704119, 116714309, 116714312, 116771113, 116771117, 116813305, 116874913, 116877099, 116919494, 116923675, 116924992]], null, null, null, null, 0, null, null, null, null, null, null, null, null, null, "https://drive.google.com", null, null, null, null, null, null, null, null, null, 0, 1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "v2internal", "https://docs.google.com", null, null, null, null, null, null, "https://sites.google.com/new/", null, null, null, null, null, 1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1, "", null, null, null, null, null, null, null, null, null, null, null, null, 6, null, null, "https://accounts.google.com/o/oauth2/auth", "https://accounts.google.com/o/oauth2/postmessageRelay", null, null, null, null, 78, "https://sites.google.com/new/?usp\u003dviewer_footer", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "https://www.gstatic.com/atari/embeds/83a60601c213b72fb19c1855fb0c5f26/intermediate-frame-minified.html", 1, null, "v2beta", null, null, null, null, null, null, 4, "https://accounts.google.com/o/oauth2/iframe", null, null, null, null, null, null, "https://2121845620-atari-embeds.googleusercontent.com/embeds/16cb204cf3a9d4d223a0a3fd8b0eec5d/inner-frame-minified.html", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, 0, null, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1, null, null, null, null, 0, "[]", null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1, null, null, [1768887308908, "editors.sites-viewer-frontend_20260112.02_p3", "856915879", null, 1, 1, ""], null, null, null, null, 0, null, null, 0, null, null, null, null, null, null, null, null, 20, 500, "https://domains.google.com", null, 0, null, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, 1, 0, 1, 0, 0, 0, 0, null, null, null, null, null, "https://www.google.com/calendar/embed", null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, "PROD", null, null, 1, null, null, null, null, "wYCZkqoz10fBWirfAym0S1sADKbJ", null, 1, {
