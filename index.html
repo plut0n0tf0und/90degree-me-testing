@@ -3173,30 +3173,20 @@ section#h.73308d77c2622c25_111 .LS81yb {
   max-width: none !important;
 }
 
-/* Project cards container */
-section#h.73308d77c2622c25_111 .LS81yb.VICjCf.j5pSsc.db35Fc {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* Project cards container - flexbox layout */
-section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb {
+/* All card containers - full width flexbox layout */
+.LS81yb.db35Fc {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  margin: 0 0 20px 0 !important;
-  box-sizing: border-box;
 }
 
-/* Project card image column */
-section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype.Kzv0Me {
+/* Card image column - first column */
+.LS81yb.db35Fc .oKdM2c.ZZyype.Kzv0Me {
   flex: 0 0 50%;
-  padding: 0;
 }
 
-/* Project card text column */
-section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype {
+/* Card text column - second column */
+.LS81yb.db35Fc .oKdM2c.ZZyype {
   flex: 0 0 50%;
   padding: 20px;
   display: flex;
@@ -3205,16 +3195,16 @@ section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype {
 
 /* Responsive: stack vertically on smaller screens */
 @media (max-width: 768px) {
-  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb {
+  .LS81yb.db35Fc {
     flex-direction: column;
   }
   
-  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype.Kzv0Me,
-  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype {
+  .LS81yb.db35Fc .oKdM2c.ZZyype.Kzv0Me,
+  .LS81yb.db35Fc .oKdM2c.ZZyype {
     flex: 0 0 100%;
   }
   
-  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype {
+  .LS81yb.db35Fc .oKdM2c.ZZyype {
     padding: 20px 0;
   }
 }
