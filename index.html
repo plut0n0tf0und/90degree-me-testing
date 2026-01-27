@@ -3180,11 +3180,43 @@ section#h.73308d77c2622c25_111 .LS81yb.VICjCf.j5pSsc.db35Fc {
   gap: 20px;
 }
 
-/* Project cards */
+/* Project cards container - flexbox layout */
 section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb {
-  flex: 0 0 49%;   /* two columns */
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0 0 20px 0 !important;
   box-sizing: border-box;
-  margin: 0 !important;
+}
+
+/* Project card image column */
+section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype.Kzv0Me {
+  flex: 0 0 50%;
+  padding: 0;
+}
+
+/* Project card text column */
+section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype {
+  flex: 0 0 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 768px) {
+  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb {
+    flex-direction: column;
+  }
+  
+  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype.Kzv0Me,
+  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype {
+    flex: 0 0 100%;
+  }
+  
+  section#h.73308d77c2622c25_111 .JNdkSc.SQVYQc.yYI8W.HQwdzb .oKdM2c.ZZyype {
+    padding: 20px 0;
+  }
 }
 
 /* Logo column */
